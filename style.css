@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    font-weight: 400;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center
+}
+.weather-main{
+    max-width: 600px;
+}
+.heading{
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 50%);
+    text-align: center;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    color: rgba(8, 202, 228, 0.747);
+    font-weight: 700;
+}
+.search-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+#map-icon{
+    color: hsl(0, 0%, 60%);
+}
+.submit{
+    border: none;
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+.fa-search{
+    color: hsl(0, 0%, 20%);
+}
+.input{
+    margin: 0 0 0 0.5rem;
+    padding: 0.2rem 0;
+    border: none;
+    font-size: 1rem;
+}
+.input:focus{
+    border: none;
+    outline: none;
+}
+
+/* weather card */
+.weather-card{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(148.07deg, rgba(8, 202, 228, 0.747), rgba(211, 233, 236, 0.295)50%, rgba(8, 202, 228, 0.747));
+    border-radius: 0.5rem;
+}
+#weather-img{
+    margin-bottom: 1.2rem;
+    width: 100px;
+}
+.weather-temp{
+    font-size: 3rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 0%);
+}
+.city-name{
+    font-size: 1.3rem;
+    color: hsl(0, 0%, 40%);
+}
+.weather-result{
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 500;
+    color: hsl(0, 0%, 20%);
+}
+.weather-details{
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.details-img{
+    width: 45px;
+}
+.humidity-level,
+.wind-level{
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 20%);
+}
+
+.attribution{
+   text-align: center;
+   margin: 1rem 0;
+   color: hsl(0, 0%, 30%);
+   font-weight: 500;
+   font-size: 0.9rem;
+}
+.attribution a{
+    color: hsl(210, 100%, 60%);
+    
+}
