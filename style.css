@@ -4,26 +4,36 @@
     box-sizing: border-box;
 }
 body{
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 98%);
     font-size: 1rem;
     font-weight: 400;
 }
 .container{
     width: 90%;
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 3rem auto;
     height: 100vh;
     display: flex;
-    justify-content: center
+    flex-direction: column;
+    place-items: center;
 }
 .weather-main{
     max-width: 600px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 0 1rem 0;
+}
+.header img{
+    width: 50px;
 }
 .heading{
     font-size: 1.5rem;
     color: hsl(0, 0%, 50%);
     text-align: center;
-    margin: 0 0 1rem 0;
     text-transform: uppercase;
     color: rgba(8, 202, 228, 0.747);
     font-weight: 700;
@@ -50,6 +60,7 @@ body{
     color: hsl(0, 0%, 20%);
 }
 .input{
+    background-color: transparent;
     margin: 0 0 0 0.5rem;
     padding: 0.2rem 0;
     border: none;
@@ -67,12 +78,35 @@ body{
     display: none;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(148.07deg, rgba(8, 202, 228, 0.747), rgba(211, 233, 236, 0.295)50%, rgba(8, 202, 228, 0.747));
+    background: linear-gradient(148.07deg, rgba(8, 202, 228, 0.747), rgba(211, 233, 236, 0.479)50%, rgba(8, 202, 228, 0.747));
     border-radius: 0.5rem;
 }
+.weather-card.effect{
+    animation: cardEffect 300ms linear 1;
+}
+@keyframes cardEffect{
+    0%{
+        transform: translateX(10px);
+    }
+    20%{
+        transform: translateX(-10px);
+    }
+    40%{
+        transform: translateY(-10px);
+    }
+    60%{
+        transform: translateX(-10px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(10px);
+    }
+}
 #weather-img{
-    margin-bottom: 1.2rem;
-    width: 100px;
+    margin-bottom: 1rem;
+    width: 80px;
 }
 .weather-temp{
     font-size: 3rem;
@@ -98,7 +132,7 @@ body{
     text-align: center;
 }
 .details-img{
-    width: 45px;
+    width: 40px;
 }
 .humidity-level,
 .wind-level{

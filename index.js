@@ -15,18 +15,24 @@ let weatherTemp = document.querySelector('.weather-temp');
 
 let getWeather = async ()=>{
     let inputValue = document.querySelector('.input').value;
+    let clearInput = document.querySelector('.input');
     try{
         let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${inputValue}&appid=${apiKey}`);
 
     if(!response.ok){
-        let clearInput = document.querySelector('.input');
         clearInput.value = "";
         clearInput.placeholder = "Enter a valid city name";
-        weatherCard.style.display = "none";
+        /* weatherCard.style.display = "none"; */
+        weatherCard.classList.add('effect');
+        setTimeout(() => {
+            weatherCard.classList.remove('effect');
+        }, 100);
         throw new Error("Could not find weather");
     }
 
     let data = await response.json();
+    console.log(data);
+    weatherCard.classList.remove('effect');
     weatherCard.style.display = "flex";
     cityName.innerHTML = data.name;
     weatherTemp.innerHTML = Math.round(data.main.temp) + '°C';
@@ -34,7 +40,6 @@ let getWeather = async ()=>{
     humidity.innerHTML = `${data.main.humidity}%`;
     result.innerHTML = `- ${data.weather[0].main}`;
     let condition = data.weather[0].main.toLowerCase();
-    console.log(condition)
     if(condition === "clouds"){
         weatherImg.src = "images/clouds.png";
     } else if(condition === "rain"){
@@ -56,7 +61,6 @@ let getWeather = async ()=>{
     } else if(condition === "wind"){
         weatherImg.src = "images/clouds.png";
     }
-    console.log(data);
 
     }
     catch(error){

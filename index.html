@@ -11,25 +11,27 @@
 <body>
     <div class="container">
         <section class="weather-main">
-            <h1 class="heading">Weather Search.</h1>
+            <div class="header">
+                <h1 class="heading">Weather Search.</h1>
+                <img src="images/weather.png" alt="">
+            </div>
             <div class="search-card">
                 <i class="fas fa-map-marker-alt" id="map-icon"></i>
                 <input type="text" class="input" id="input" placeholder="Enter city name">
                 <button class="submit" id="submitBtn"><i class="fas fa-search"></i></button>      
             </div>
-            <div class="weather-card">
-                <!-- <i id="weather-img" class="fas fa-sun"></i> -->
+            <div class="weather-card effect">
                 <img src="" alt="" class="weather-img" id="weather-img">
                 <p class="weather-temp"></p>
                 <h2 class="city-name">Pretoria</h2>
                 <p class="weather-result"></p>
                 <div class="weather-details">
-                    <div class="humidity-wrapper">
+                    <div class="humidity-div">
                         <img src="images/humidity.png" alt="" class="details-img">
                         <p class="humidity-level"></p>
                     </div>
-                    <div class="wind-wrapper">
-                        <img src="images/wind.png" alt="" class="details-img">
+                    <div class="wind-div">
+                        <img src="images/wind.png" alt="" class="details-img wind-img">
                         <p class="wind-level"></p>
                     </div>
                 </div>
@@ -39,7 +41,7 @@
 
     <footer>
         <div class="attribution">
-            Coded by <a href="https://doniecodes.github.io/portfolio/" target="_blank">Donald Zar | @doniecode</a>
+            Coded by <a href="https://doniecodes.github.io/portfolio/" target="_blank">@doniecode</a>
         </div>
     </footer>
     <script src="index.js"></script>
